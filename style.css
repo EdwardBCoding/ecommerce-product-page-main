@@ -23,6 +23,57 @@ body{
     font-weight: 400;
 }
 
+.subheading,
+.discount{
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+.subheading{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+}
+
+.discount{
+    background-color: var(--pale-orange);
+}
+
+.item-title,
+.price{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.item-text{
+    color: var(--gray);
+    line-height: 1.5rem;
+}
+
+.old-price{
+    color: var(--light-gray);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.amount-container{
+    background-color: var(--off-white);
+}
+
+.amount{
+    font-weight: 700;
+}
+
+.add-to-cart{
+    color: var(--white);
+    background-color: var(--primary-orange);
+}
+
+.add-to-cart>img{
+    fill: var(--white);
+}
+/*! weird not working white color cart */
+
 /* LAYOUTS */
 
 
