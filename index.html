@@ -8,37 +8,66 @@
   
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+  <aside class="menu-container">
+    <button class="menu-btn">
+      <img src="images/icon-menu.svg" alt="open menu icon">
+    </button>
+    <nav class="navigation display-none">
+      <a href="#" class="links">Collections</a>
+      <a href="#" class="links">Men</a>
+      <a href="#" class="links">Women</a>
+      <a href="#" class="links">About</a>
+      <a href="#" class="links">Contact</a>
+    </nav>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <img src="images/logo.svg" alt="logo">
 
-  Sneaker Company
+    <img src="images/icon-cart.svg" alt="cart icon">
 
-  Fall Limited Edition Sneakers
+    <img src="images/image-avatar.png" alt="profile avatar">
+  </aside>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+  <main>
+    <div class="image-container">
+      <button class="left-btn">
+        <img src="images/icon-previous.svg" alt="left arrow icon">
+      </button>
+      <button class="right-btn">
+        <img src="images/icon-next.svg" alt="right arrow icon">
+      </button>
+    </div>
+    <div class="text-container">
+      <h2 class="subheading">Sneaker Company</h2>
+      <h1 class="item-title">Fall Limited Edition Sneakers</h1>
+      <p class="item-text">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    </div>
+    <div class="purchase-container">
+      <div class="price-container">
+        <h2 class="price">$125.00</h2>
+        <h3 class="discount">50%</h3>
+        <p class="old-price">$250.00</p>
+      </div>
+      <div class="amount-container">
+        <button class="minus"><img src="images/icon-minus.svg" alt="subtract quantity"></button>
+        <h2 class="amount">0</h2>
+        <button class="plus"><img src="images/icon-plus.svg" alt="add quantity"></button>
+      </div>
+    </div>
+    <button class="add-to-cart">Add to cart</button>
 
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/EdwardBCoding">EdwardBCoding</a>.
+    </div>
+  </footer>
 </body>
 </html>
