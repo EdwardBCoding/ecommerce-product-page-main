@@ -82,7 +82,7 @@ body{
 /* LAYOUTS */
 
 .menu-container{
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -97,22 +97,22 @@ body{
 
 
 .profile-pic{
-    max-height: 100%;
-    padding: 1.5rem;
+    max-height: 50%;
 }
 
 .image-container{
-    height: 40vh;
+    height: 37.5vh;
     width: 100%;
     background-image: url(images/image-product-1.jpg);
+    background-size: cover;
 }
 
 .right-btn,
 .left-btn{
-    width: 4rem;
+    width: 3rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    
+    text-align: center;
 }
 
 .text-container,
@@ -129,10 +129,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .add-to-cart{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-radius: 0.8rem;
 }
 
 /* ANIMATIONS */
