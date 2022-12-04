@@ -13,22 +13,25 @@
 </head>
 <body>
   <aside class="menu-container">
-    <button class="menu-btn">
-      <img src="images/icon-menu.svg" alt="open menu icon">
-    </button>
-    <nav class="navigation display-none">
-      <a href="#" class="links">Collections</a>
-      <a href="#" class="links">Men</a>
-      <a href="#" class="links">Women</a>
-      <a href="#" class="links">About</a>
-      <a href="#" class="links">Contact</a>
-    </nav>
-
-    <img src="images/logo.svg" alt="logo">
-
-    <img src="images/icon-cart.svg" alt="cart icon">
-
-    <img class="profile-pic" src="images/image-avatar.png" alt="profile avatar">
+    <div class="nav-left">
+      <button class="menu-btn">
+        <img src="images/icon-menu.svg" alt="open menu icon">
+      </button>
+      <nav class="navigation display-none">
+        <a href="#" class="links">Collections</a>
+        <a href="#" class="links">Men</a>
+        <a href="#" class="links">Women</a>
+        <a href="#" class="links">About</a>
+        <a href="#" class="links">Contact</a>
+      </nav>
+      <img src="images/logo.svg" alt="logo">
+    </div>
+    <div class="nav-right">
+  
+      <img src="images/icon-cart.svg" alt="cart icon">
+  
+      <img class="profile-pic" src="images/image-avatar.png" alt="profile avatar">
+    </div>
   </aside>
 
   <main>
@@ -48,8 +51,10 @@
     </div>
     <div class="purchase-container">
       <div class="price-container">
-        <h2 class="price">$125.00</h2>
-        <h3 class="discount">50%</h3>
+        <div class="price-discount">
+          <h2 class="price">$125.00</h2>
+          <h3 class="discount">50%</h3>
+        </div>
         <span class="old-price">$250.00</span>
       </div>
       <div class="amount-container">
