@@ -23,6 +23,12 @@ body{
     font-weight: 400;
 }
 
+.navigation{
+    background-color: var(--white);
+    font-weight: 700;
+
+}
+
 .subheading,
 .discount{
     color: var(--primary-orange);
@@ -113,6 +119,27 @@ body{
 
 .profile-pic{
     max-height: 40%;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    height: 100%;
+    align-items: start;
+    box-shadow: 50vw 0 rgba(24, 24, 24, 0.65);
+}
+
+.navigation>*{
+    margin-top: 2.5rem;
+    margin-left: 1.5rem;
+}
+
+.navigation>img{
+    margin-bottom: 2rem;
 }
 
 /* images */
