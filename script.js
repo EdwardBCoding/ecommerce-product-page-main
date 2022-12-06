@@ -2,7 +2,8 @@
 
 const menuButton = document.querySelector('.menu-btn')
 const closeButton = document.querySelector('#close-btn')
-const navigation = document.querySelectorAll('.links')
+const navigation = document.querySelector('.navigation')
+const navigationLinks = document.querySelectorAll('.links')
 
 console.log(Array.from(navigation))
 
@@ -11,7 +12,14 @@ console.log(Array.from(navigation))
 //! Event Listeners
 
 menuButton.addEventListener('click', displayMenu)
-// navigation.addEventListener('click', test)
+closeButton.addEventListener('click', closeMenu)
+navigation.addEventListener('click', e => {
+    console.log(e.target.classList[0])
+    if(e.target.classList[0] == "links-1"){
+        console.log('memes')
+        document.querySelector('.links-1').innerText = "cooolections"
+    }
+})
 
 //! Functions
 
@@ -20,10 +28,11 @@ function test() {
 }
 
 function displayMenu(){
-    document.querySelector('.navigation').classList.remove('display-none')
+    navigation.classList.remove('display-none')
 }
 
 function closeMenu(){
-    
+    navigation.classList.add('display-none')
 }
+
 
