@@ -213,6 +213,18 @@ body{
     margin-bottom: 1rem;
 }
 
+.plus,
+.minus{
+    height: 100%;
+    width: 25%;
+    text-align: center;
+}
+
+.plus>img,
+.minus>img{
+    pointer-events: none;
+}
+
 .add-to-cart{
     width: 100%;
     display: flex;

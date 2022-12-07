@@ -5,18 +5,21 @@ const closeButton = document.querySelector('#close-btn')
 const navigation = document.querySelector('.navigation')
 // const navigationLinks = document.querySelectorAll('.links')
 const amountContainer = document.querySelector('.amount-container')
-// const 
+const amount = document.querySelector('.amount')
+const cartButton = document.querySelector('.add-to-cart')
 
 // console.log(Array.from(navigation))
 
 //! Constants
 
+let totalAmount = 0
+
 //! Event Listeners
 
 menuButton.addEventListener('click', displayMenu)
 closeButton.addEventListener('click', closeMenu)
-amountContainer.addEventListener('click', amountCounter)
-
+amountContainer.addEventListener('click', amountCounter) 
+cartButton.addEventListener('click', addToCart)
 
 
 
@@ -44,5 +47,23 @@ function closeMenu(){
 }
 
 function amountCounter(e){
-    console.log(e)
+    console.log(e.target.classList[0])
+    if(e.target.classList[0] == "plus"){
+        amount.innerText = ++ amount.innerText 
+        console.log(amount.innerText)
+    }
+    if(e.target.classList[0] == "minus"){
+        if(amount.innerText == 0){
+            return
+        }
+        amount.innerText = -- amount.innerText 
+        console.log(amount.innerText)
+    }
+}
+
+function addToCart(){
+    totalAmount = totalAmount + Number(amount.innerText)
+    // totalAmount = Number(totalAmount)
+    console.log(totalAmount)
+    amount.innerText = "0"
 }
