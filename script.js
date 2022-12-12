@@ -14,11 +14,17 @@ const cartEmpty = document.querySelector('.empty-cart')
 const totalPrice = document.querySelector('.total-price')
 const cartAmount = document.querySelector('.total-amount')
 const trashCart = document.querySelector('.trash-cart')
+const imageContainer = document.querySelector('.image-container')
+const leftButton = document.querySelector('.left-btn')
+const rightButton = document.querySelector('.right-btn')
+
 
 // console.log(Array.from(navigation))
 
 //! Constants
 
+
+let imageNumber = 1
 let totalAmount = 0
 
 //! Event Listeners
@@ -29,6 +35,8 @@ amountContainer.addEventListener('click', amountCounter)
 cartButton.addEventListener('click', addToCart)
 cartIcon.addEventListener('click', toggleCart)
 trashCart.addEventListener('click', trash)
+leftButton.addEventListener('click', prevImage)
+rightButton.addEventListener('click', nextImage)
 
 
 
@@ -97,4 +105,16 @@ function trash(){
     totalAmount = 0
     cartEmpty.classList.remove('display-none')
     cartContent.classList.add('display-none')
+}
+
+function nextImage(){
+    imageNumber++
+    if(imageNumber == 5){imageNumber = 1}
+    imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
+}
+
+function prevImage(){
+    imageNumber--
+    if(imageNumber == 0){imageNumber = 4}
+    imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
 }
