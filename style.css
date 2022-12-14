@@ -352,9 +352,7 @@ body{
         color: var(--gray);
     }
     .navigation>*{
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 0;
+        margin: 0 1rem;
     }
     .navigation>img{
         display: none;
@@ -384,6 +382,7 @@ body{
     .image-container{
         max-width: 25rem;
         border-radius: 5%;
+        aspect-ratio: 1/1;
     }
 
     .text-purchase-container{
