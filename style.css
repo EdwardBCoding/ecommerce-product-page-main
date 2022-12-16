@@ -398,6 +398,34 @@ body{
         /* margin: 0 4rem; */
     }
 
+    .thumbnail-1,
+    .thumbnail-2,
+    .thumbnail-3,
+    .thumbnail-4{
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 15%;
+        background-size: cover;
+        transform: translateY(15rem);
+    }
+
+    .thumbnail-1{
+        background-image: url(images/image-product-1-thumbnail.jpg);
+    }
+
+    .thumbnail-2{
+        background-image: url(images/image-product-2-thumbnail.jpg);        
+    }
+
+    .thumbnail-3{
+        background-image: url(images/image-product-3-thumbnail.jpg);        
+    }
+
+    .thumbnail-4{
+        background-image: url(images/image-product-4-thumbnail.jpg);        
+    }
+
     .right-btn,
     .left-btn{
         display: none;

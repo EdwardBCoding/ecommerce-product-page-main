@@ -17,6 +17,10 @@ const trashCart = document.querySelector('.trash-cart')
 const imageContainer = document.querySelector('.image-container')
 const leftButton = document.querySelector('.left-btn')
 const rightButton = document.querySelector('.right-btn')
+const thumbOne = document.querySelector('.thumbnail-1')
+const thumbTwo = document.querySelector('.thumbnail-2')
+const thumbThree = document.querySelector('.thumbnail-3')
+const thumbFour = document.querySelector('.thumbnail-4')
 
 
 // console.log(Array.from(navigation))
@@ -37,6 +41,7 @@ cartIcon.addEventListener('click', toggleCart)
 trashCart.addEventListener('click', trash)
 leftButton.addEventListener('click', prevImage)
 rightButton.addEventListener('click', nextImage)
+imageContainer.addEventListener('click', thumbSwitcher)
 
 
 
@@ -117,4 +122,19 @@ function prevImage(){
     imageNumber--
     if(imageNumber == 0){imageNumber = 4}
     imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
+}
+
+function thumbSwitcher(e){
+    if(e.target.classList[0] == "thumbnail-1"){
+        imageContainer.style.backgroundImage = "url(images/thumbnail-1.jpg)"
+    }
+    if(e.target.classList[0] == "thumbnail-2"){
+        imageContainer.style.backgroundImage = "url(images/thumbnail-2.jpg)"
+    }
+    if(e.target.classList[0] == "thumbnail-3"){
+        imageContainer.style.backgroundImage = "url(images/thumbnail-3.jpg)"
+    }
+    if(e.target.classList[0] == "thumbnail-4"){
+        imageContainer.style.backgroundImage = "url(images/thumbnail-4.jpg)"
+    }
 }
