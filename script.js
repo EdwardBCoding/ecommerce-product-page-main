@@ -126,15 +126,15 @@ function prevImage(){
 
 function thumbSwitcher(e){
     if(e.target.classList[0] == "thumbnail-1"){
-        imageContainer.style.backgroundImage = "url(images/thumbnail-1.jpg)"
+        imageContainer.style.backgroundImage = "url(images/image-product-1.jpg)"
     }
     if(e.target.classList[0] == "thumbnail-2"){
-        imageContainer.style.backgroundImage = "url(images/thumbnail-2.jpg)"
+        imageContainer.style.backgroundImage = "url(images/image-product-2.jpg)"
     }
     if(e.target.classList[0] == "thumbnail-3"){
-        imageContainer.style.backgroundImage = "url(images/thumbnail-3.jpg)"
+        imageContainer.style.backgroundImage = "url(images/image-product-3.jpg)"
     }
     if(e.target.classList[0] == "thumbnail-4"){
-        imageContainer.style.backgroundImage = "url(images/thumbnail-4.jpg)"
+        imageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
     }
 }
