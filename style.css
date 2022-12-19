@@ -140,6 +140,7 @@ body{
 
 .navigation>img{
     margin-bottom: 2rem;
+    
 }
 
 /* ! WIP */
@@ -151,6 +152,10 @@ body{
     margin: 21% 2.5%;
     border-radius: 5%;
     background-color: var(--white);
+}
+
+.cart-icon{
+    cursor: pointer;
 }
 
 .cart-title{
@@ -168,7 +173,6 @@ body{
 .cart-content{
     padding: 1.5rem 1.5rem;
     height: 50%;
-
 }
 
 .empty-cart{
@@ -220,6 +224,9 @@ body{
     cursor: pointer;
 }
 
+.trash-cart{
+    cursor: pointer;
+}
 
 
 
@@ -321,6 +328,8 @@ body{
     cursor: pointer;
 }
 
+
+
 /* ANIMATIONS */
 
 
@@ -333,6 +342,19 @@ body{
 
 
 /* MEDIA QUERIES */
+
+@media(max-width: 1000px) and (min-width:850px){
+    main{
+        gap: 0rem;
+    }
+}
+
+@media(min-width: 1000px){
+    main{
+        
+        gap: 3rem;
+    }
+}
 
 @media(min-width: 850px){
     body{
@@ -383,9 +405,9 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 3rem;
+        align-items: center;
         border-top: 0.1rem solid var(--light-gray);
-        height: 100%;
+        height: auto;
     }
 
 
@@ -395,6 +417,7 @@ body{
         border-radius: 5%;
         aspect-ratio: 1/1;
         height: 80%;
+        min-width: 25rem;
         /* margin: 0 4rem; */
     }
 
@@ -403,11 +426,12 @@ body{
     .thumbnail-3,
     .thumbnail-4{
         display: block;
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
         border-radius: 15%;
         background-size: cover;
-        transform: translateY(15rem);
+        transform: translateY(16rem);
+        cursor: pointer;
     }
 
     .thumbnail-1{
@@ -433,7 +457,32 @@ body{
 
     .text-purchase-container{
         max-width: 30rem;
+        min-width: 28rem;
         /* padding: 0 4rem; */
+    }
+
+    .buttons-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .buttons-container>*{
+        margin: auto;
+    }
+
+    .amount-container{
+        width: 35%;
+    }
+
+    .add-to-cart{
+        width: 60%;
+    }
+
+    .cart{
+        width: 20rem;
+
+        box-shadow: 1rem 1rem 5rem black;
     }
 
 }
