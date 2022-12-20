@@ -485,6 +485,11 @@ body{
         box-shadow: 1rem 1rem 5rem black;
     }
 
+    .price-container{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
 }
 
 
