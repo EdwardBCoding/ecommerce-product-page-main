@@ -88,6 +88,11 @@ body{
 
 /* LAYOUTS */
 
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
 
 /* nav */
 
@@ -147,9 +152,10 @@ body{
 
 .cart{
     position: absolute;
-    width: 95%;
+    width: clamp(10rem , 95vw, 22.25rem);
     height: 15.5rem;
-    margin: 21% 2.5%;
+    margin-top: 9vh;
+    right: 2.5%;
     border-radius: 5%;
     background-color: var(--white);
 }
@@ -480,9 +486,11 @@ body{
     }
 
     .cart{
-        width: 20rem;
+        /* width: 20rem; */
+        
+        right: 5%;
 
-        box-shadow: 1rem 1rem 5rem black;
+        box-shadow: 1.25rem 1rem 2.5rem rgba(0, 0, 0, 0.298);
     }
 
     .price-container{
