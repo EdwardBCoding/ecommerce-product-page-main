@@ -90,7 +90,7 @@ body{
 
 body{
     height: 100vh;
-    width: 100vw;
+    
 }
 
 
@@ -228,13 +228,23 @@ body{
     color: var(--white);
     font-weight: 700;
     cursor: pointer;
+    
 }
 
 .trash-cart{
     cursor: pointer;
 }
 
+.links{
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
 
+.links:hover{
+    margin-bottom: -0.15rem;
+    border-bottom: 0.15rem solid var(--primary-orange);
+}
 
 /* ! WIP */
 
@@ -332,11 +342,52 @@ body{
     padding: 1.25rem 0;
     border-radius: 0.8rem;
     cursor: pointer;
+    opacity: 1;
+    transition: background-color 0.2s linear;
+    box-shadow: 0 0.8rem 1.5rem 0.2rem rgba(255, 174, 112, 0.445);
 }
 
 
 
 /* ANIMATIONS */
+
+
+
+.thumbnail-active::before{
+    content: '';
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    border-radius: 15%;
+    box-shadow: 0 0 0 0.2rem var(--primary-orange);
+    width: 5rem;
+    height: 5rem;
+}
+
+.thumbnail-1:hover::before,
+.thumbnail-2:hover::before,
+.thumbnail-3:hover::before,
+.thumbnail-4:hover::before{
+    content: '';
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    border-radius: 15%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.add-to-cart:hover{
+    background-color: hsl(26, 100%, 72%);
+    /* opacity: 0.5; */
+}
+
+/* .links::before{
+    content: '';
+    position: absolute;
+    width: 1%;
+    height: 4.1rem;
+    border-bottom: 0.5rem solid var(--primary-orange);
+} */
+
 
 
 
@@ -365,6 +416,7 @@ body{
 @media(min-width: 850px){
     body{
         margin: 0 5%;
+        width: 90vw;
     }
 
     .menu-btn{

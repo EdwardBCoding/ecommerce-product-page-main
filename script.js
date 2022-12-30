@@ -124,17 +124,32 @@ function prevImage(){
     imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
 }
 
+function clearActiveThumb(){
+    thumbOne.classList.remove('thumbnail-active')
+    thumbTwo.classList.remove('thumbnail-active')
+    thumbThree.classList.remove('thumbnail-active')
+    thumbFour.classList.remove('thumbnail-active')
+}
+
 function thumbSwitcher(e){
     if(e.target.classList[0] == "thumbnail-1"){
         imageContainer.style.backgroundImage = "url(images/image-product-1.jpg)"
+        clearActiveThumb()
+        thumbOne.classList.add('thumbnail-active')
     }
     if(e.target.classList[0] == "thumbnail-2"){
         imageContainer.style.backgroundImage = "url(images/image-product-2.jpg)"
+        clearActiveThumb()
+        thumbTwo.classList.add('thumbnail-active')
     }
     if(e.target.classList[0] == "thumbnail-3"){
         imageContainer.style.backgroundImage = "url(images/image-product-3.jpg)"
+        clearActiveThumb()
+        thumbThree.classList.add('thumbnail-active')
     }
     if(e.target.classList[0] == "thumbnail-4"){
         imageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
+        clearActiveThumb()
+        thumbFour.classList.add('thumbnail-active')
     }
 }
