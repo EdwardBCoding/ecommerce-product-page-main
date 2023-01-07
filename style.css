@@ -124,6 +124,7 @@ body{
 
 .profile-pic{
     max-height: 40%;
+    border-radius: 50%;
 }
 
 .navigation{
@@ -244,6 +245,12 @@ body{
 .links:hover{
     margin-bottom: -0.15rem;
     border-bottom: 0.15rem solid var(--primary-orange);
+}
+
+.profile-pic:hover{
+    box-shadow: 0 0 0 0.15rem var(--primary-orange);
+    /* border: 0.15rem solid var(--primary-orange);
+    margin: -0.15rem; */
 }
 
 /* ! WIP */
