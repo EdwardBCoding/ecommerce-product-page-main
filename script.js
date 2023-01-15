@@ -21,7 +21,7 @@ const thumbOne = document.querySelector('.thumbnail-1')
 const thumbTwo = document.querySelector('.thumbnail-2')
 const thumbThree = document.querySelector('.thumbnail-3')
 const thumbFour = document.querySelector('.thumbnail-4')
-
+const lightBox = document.querySelector('.light-box')
 
 // console.log(Array.from(navigation))
 
@@ -42,7 +42,7 @@ trashCart.addEventListener('click', trash)
 leftButton.addEventListener('click', prevImage)
 rightButton.addEventListener('click', nextImage)
 imageContainer.addEventListener('click', thumbSwitcher)
-
+lightBox.addEventListener('click', thumbSwitcher)
 
 
 
@@ -132,24 +132,28 @@ function clearActiveThumb(){
 }
 
 function thumbSwitcher(e){
-    if(e.target.classList[0] == "thumbnail-1"){
+    console.log(e.target.classList[0])
+    if(e.target.classList[0] == "thumbnail-1" || e.target.classList[0] == "lb-thumbnail-1"){
         imageContainer.style.backgroundImage = "url(images/image-product-1.jpg)"
         clearActiveThumb()
-        thumbOne.classList.add('thumbnail-active')
+        thumbOne.classList.add('thumbnail-active' || e.target.classList[0] == "lb-thumbnail-1")
     }
-    if(e.target.classList[0] == "thumbnail-2"){
+    if(e.target.classList[0] == "thumbnail-2" || e.target.classList[0] == "lb-thumbnail-1"){
         imageContainer.style.backgroundImage = "url(images/image-product-2.jpg)"
         clearActiveThumb()
         thumbTwo.classList.add('thumbnail-active')
     }
-    if(e.target.classList[0] == "thumbnail-3"){
+    if(e.target.classList[0] == "thumbnail-3" || e.target.classList[0] == "lb-thumbnail-1"){
         imageContainer.style.backgroundImage = "url(images/image-product-3.jpg)"
         clearActiveThumb()
         thumbThree.classList.add('thumbnail-active')
     }
-    if(e.target.classList[0] == "thumbnail-4"){
+    if(e.target.classList[0] == "thumbnail-4" || e.target.classList[0] == "lb-thumbnail-1"){
         imageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
         clearActiveThumb()
         thumbFour.classList.add('thumbnail-active')
+    }
+    if(e.target.classList[0] == "image-container" && window.innerWidth >= 800){
+        lightBox.classList.remove('display-none')
     }
 }
