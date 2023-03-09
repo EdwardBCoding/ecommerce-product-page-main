@@ -21,7 +21,19 @@ const thumbOne = document.querySelector('.thumbnail-1')
 const thumbTwo = document.querySelector('.thumbnail-2')
 const thumbThree = document.querySelector('.thumbnail-3')
 const thumbFour = document.querySelector('.thumbnail-4')
+
+
 const lightBox = document.querySelector('.light-box')
+const lbImageContainer = document.querySelector('.lb-image-container')
+
+const lbThumbOne = document.querySelector('.lb-thumbnail-1')
+const lbThumbTwo = document.querySelector('.lb-thumbnail-2')
+const lbThumbThree = document.querySelector('.lb-thumbnail-3')
+const lbThumbFour = document.querySelector('.lb-thumbnail-4')
+
+const lbClose = document.querySelector('.lb-close-btn')
+const lbPrevious = document.querySelector('.lb-left-btn')
+const lbNext = document.querySelector('.lb-right-btn')
 
 // console.log(Array.from(navigation))
 
@@ -42,7 +54,7 @@ trashCart.addEventListener('click', trash)
 leftButton.addEventListener('click', prevImage)
 rightButton.addEventListener('click', nextImage)
 imageContainer.addEventListener('click', thumbSwitcher)
-lightBox.addEventListener('click', thumbSwitcher)
+lightBox.addEventListener('click', lbthumbSwitcher)
 
 
 
@@ -112,13 +124,16 @@ function trash(){
     cartContent.classList.add('display-none')
 }
 
-function nextImage(){
+function nextImage(e){
     imageNumber++
     if(imageNumber == 5){imageNumber = 1}
-    imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
+    if(e.target.classList[0] == "close-btn"){
+        imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
+    }
+
 }
 
-function prevImage(){
+function prevImage(e){
     imageNumber--
     if(imageNumber == 0){imageNumber = 4}
     imageContainer.style.backgroundImage = "url(images/image-product-"+ imageNumber +".jpg)"
@@ -133,27 +148,77 @@ function clearActiveThumb(){
 
 function thumbSwitcher(e){
     console.log(e.target.classList[0])
-    if(e.target.classList[0] == "thumbnail-1" || e.target.classList[0] == "lb-thumbnail-1"){
+    if(e.target.classList[0] == "thumbnail-1"){
         imageContainer.style.backgroundImage = "url(images/image-product-1.jpg)"
         clearActiveThumb()
-        thumbOne.classList.add('thumbnail-active' || e.target.classList[0] == "lb-thumbnail-1")
+        thumbOne.classList.add('thumbnail-active')
     }
-    if(e.target.classList[0] == "thumbnail-2" || e.target.classList[0] == "lb-thumbnail-1"){
+    if(e.target.classList[0] == "thumbnail-2"){
         imageContainer.style.backgroundImage = "url(images/image-product-2.jpg)"
         clearActiveThumb()
         thumbTwo.classList.add('thumbnail-active')
     }
-    if(e.target.classList[0] == "thumbnail-3" || e.target.classList[0] == "lb-thumbnail-1"){
+    if(e.target.classList[0] == "thumbnail-3"){
         imageContainer.style.backgroundImage = "url(images/image-product-3.jpg)"
         clearActiveThumb()
         thumbThree.classList.add('thumbnail-active')
     }
-    if(e.target.classList[0] == "thumbnail-4" || e.target.classList[0] == "lb-thumbnail-1"){
+    if(e.target.classList[0] == "thumbnail-4"){
         imageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
         clearActiveThumb()
         thumbFour.classList.add('thumbnail-active')
     }
     if(e.target.classList[0] == "image-container" && window.innerWidth >= 800){
         lightBox.classList.remove('display-none')
+    }
+}
+
+function clearActiveLBThumb(){
+    lbThumbOne.classList.remove('thumbnail-active')
+    lbThumbTwo.classList.remove('thumbnail-active')
+    lbThumbThree.classList.remove('thumbnail-active')
+    lbThumbFour.classList.remove('thumbnail-active')
+}
+
+function lbthumbSwitcher(e){
+    console.log(e.target.classList[0])
+    if(e.target.classList[0] == "lb-thumbnail-1"){
+        lbImageContainer.style.backgroundImage = "url(images/image-product-1.jpg)"
+        clearActiveLBThumb()
+        lbThumbOne.classList.add('thumbnail-active')
+    }
+    if(e.target.classList[0] == "lb-thumbnail-2"){
+        lbImageContainer.style.backgroundImage = "url(images/image-product-2.jpg)"
+        clearActiveLBThumb()
+        lbThumbTwo.classList.add('thumbnail-active')
+    }
+    if(e.target.classList[0] == "lb-thumbnail-3"){
+        lbImageContainer.style.backgroundImage = "url(images/image-product-3.jpg)"
+        clearActiveLBThumb()
+        lbThumbThree.classList.add('thumbnail-active')
+    }
+    if(e.target.classList[0] == "lb-thumbnail-4"){
+        lbImageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
+        clearActiveLBThumb()
+        lbThumbFour.classList.add('thumbnail-active')
+    }
+
+    if(e.target.classList[0] == "lb-right-btn"){
+        lbImageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
+        clearActiveLBThumb()
+        thumbFour.classList.add('thumbnail-active')
+    }
+    if(e.target.classList[0] == "lb-left-btn"){
+        lbImageContainer.style.backgroundImage = "url(images/image-product-4.jpg)"
+        clearActiveLBThumb()
+        thumbFour.classList.add('thumbnail-active')
+    }
+    if(e.target.classList[0] == "lb-close-btn"){
+        lightBox.classList.add('display-none')
+        clearActiveLBThumb()
+    }
+    if(e.target.classList[0] == "light-box"){
+        lightBox.classList.add('display-none')
+        clearActiveLBThumb()
     }
 }

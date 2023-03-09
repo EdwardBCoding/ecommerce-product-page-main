@@ -253,6 +253,13 @@ body{
     margin: -0.15rem; */
 }
 
+.lb-right-btn>img,
+.lb-left-btn>img,
+.lb-close-btn>img
+{
+    pointer-events: none;
+}
+
 /* ! WIP */
 
 /* images */
